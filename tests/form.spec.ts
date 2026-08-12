@@ -11,6 +11,8 @@ test.setTimeout(60000);
 test.describe('Automation Testing Practice form', () => {
   test('fills and submits the data entry form', async ({ page }) => {
     await page.goto(baseUrl, { waitUntil: 'domcontentloaded' });
+    console.log(await page.title());
+console.log(page.url());
     await expect(page).toHaveTitle(/Automation Testing Practice/);
 
     await page.fill('#name', 'Sabari');
