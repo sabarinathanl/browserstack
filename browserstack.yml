@@ -26,6 +26,17 @@ platforms:
     osVersion: Ventura
     browserName: playwright-webkit
     browserVersion: latest
+
+  #mobile platforms
+  - os: iOS
+    osVersion: 15.0
+    device: iPhone 13
+    realMobile: true
+  - os: Android
+    osVersion: 12.0
+    device: Samsung Galaxy S22
+    realMobile: true
+
 parallelsPerPlatform: 1
 
 browserstackLocal: false
