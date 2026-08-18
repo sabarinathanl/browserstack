@@ -1,0 +1,37 @@
+userName: ${BROWSERSTACK_USERNAME}
+accessKey: ${BROWSERSTACK_ACCESS_KEY}
+
+framework: playwright
+
+projectName: OrangeHRM-Cloud-Testing
+buildName: OrangeHRM-Playwright-Build
+
+platforms:
+  - os: Windows
+    osVersion: 11
+    browserName: playwright-chromium
+    browserVersion: latest
+
+  - os: Windows
+    osVersion: 11
+    browserName: edge
+    browserVersion: latest
+
+  - os: Windows
+    osVersion: 11
+    browserName: playwright-firefox
+    browserVersion: latest
+
+  - os: OS X
+    osVersion: Ventura
+    browserName: playwright-webkit
+    browserVersion: latest
+parallelsPerPlatform: 1
+
+browserstackLocal: false
+
+debug: true
+video: true
+networkLogs: true
+consoleLogs: info
+testReporting: true

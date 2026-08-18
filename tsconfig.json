@@ -9,7 +9,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "types": ["node", "playwright"]
+    "types": ["node", "@playwright/test"]
   },
-  "include": ["tests/**/*.ts"]
+  "include": ["**/*.ts"]
 }

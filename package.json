@@ -6,11 +6,20 @@
     "test": "npx playwright test",
     "test:headed": "npx playwright test --headed",
     "test:trace": "npx playwright test --trace on",
-    "show-report": "npx playwright show-report playwright-report"
+    "show-report": "npx playwright show-report playwright-report",
+    "postinstall": "npm update browserstack-node-sdk",
+    "test-browserstack": "npx browserstack-node-sdk playwright test",
+    "test:headed-browserstack": "npx browserstack-node-sdk playwright test --headed",
+    "test:trace-browserstack": "npx browserstack-node-sdk playwright test --trace on",
+    "show-report-browserstack": "npx browserstack-node-sdk playwright show-report playwright-report",
+    "browserstack": "browserstack-node-sdk playwright test",
+    "browserstack:download-videos": "node scripts/download-browserstack-videos.js",
+    "browserstack:run": "node scripts/run-browserstack.js"
   },
   "devDependencies": {
-    "@playwright/test": "^1.45.0",
-    "dotenv": "^16.6.1",
-    "@types/node": "^20.18.0"
+    "@playwright/test": "^1.61.0",
+    "@types/node": "^20.18.0",
+    "browserstack-node-sdk": "^1.66.0",
+    "dotenv": "^16.6.1"
   }
 }

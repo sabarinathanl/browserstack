@@ -1,27 +1,12 @@
-import type { PlaywrightTestConfig } from '@playwright/test';
+import { defineConfig } from '@playwright/test';
 
-const config: PlaywrightTestConfig = {
+export default defineConfig({
   testDir: './tests',
-  timeout: 30 * 1000,
-  expect: {
-    timeout: 5000
-  },
-  reporter: [['list'], ['html', { outputFolder: 'playwright-report', open: 'never' }]],
-  use: {
-    browserName: 'chromium',
-    headless: true,
-    viewport: { width: 1280, height: 720 },
-    actionTimeout: 10000,
-    ignoreHTTPSErrors: true,
-    video: 'on',
-    screenshot: 'on'
-  },
-  projects: [
-    {
-      name: 'chromium',
-      use: { browserName: 'chromium' }
-    }
-  ]
-};
+  testMatch: '**/*.spec.ts',
 
-export default config;
+  use: {
+    headless: true,
+    screenshot: 'on',
+    video: 'on',
+  },
+});

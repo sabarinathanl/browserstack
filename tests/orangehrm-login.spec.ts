@@ -1,11 +1,13 @@
 import 'dotenv/config';
 import { test, expect } from '@playwright/test';
 
-const baseUrl = process.env.BASE_URL;
+const baseUrl = process.env.BASE_URL || 'http://localhost';
 
 if (!baseUrl) {
-  throw new Error('BASE_URL environment variable is required');
+
+  throw new Error('BASE_URL environment variable is not defined');
 }
+
 
 test('OrangeHRM Login', async ({ page }) => {
   await page.goto(baseUrl);
