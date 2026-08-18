@@ -3,6 +3,7 @@ import { test, expect } from '@playwright/test';
 
 const baseUrl = process.env.BASE_URL || 'http://localhost';
 
+// Check if the BASE_URL environment variable is defined
 if (!baseUrl) {
 
   throw new Error('BASE_URL environment variable is not defined');
