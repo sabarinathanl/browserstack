@@ -63,7 +63,6 @@ test('OrangeHRM Login', async ({ page }) => {
     force: true,
   });
 
-  // Verify successful login
   await expect(page).toHaveURL(/dashboard/, {
     timeout: 100000,
   });
