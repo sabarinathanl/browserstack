@@ -7,6 +7,6 @@ coverage/
 local.log
 
 log/
-browserstack-artifacts.zip
+
 browserstackSetupConfig.json
 playwright-browserstack-sdk.config.ts
